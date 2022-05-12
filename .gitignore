@@ -1,5 +1,5 @@
 
-*.constants
+
 # Miscellaneous
 *.class
 *.log
@@ -24,6 +24,7 @@
 
 # Flutter/Dart/Pub related
 **/doc/api/
+**/lib/constants.dart
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
@@ -32,6 +33,7 @@
 .pub-cache/
 .pub/
 /build/
+
 
 # Web related
 lib/generated_plugin_registrant.dart
