@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transaction_app/constants.dart';
+import 'package:transaction_app/functions/functions.dart';
 import 'package:web3dart/web3dart.dart';
 import 'package:http/http.dart';
 
@@ -13,7 +14,7 @@ class Buttons extends StatefulWidget {
 class _ButtonsState extends State<Buttons> {
   late int value;
 
-  Future<dynamic> dialog(String name) {
+  Future<dynamic> dialog(String name, Future<String> function) {
     return showDialog(
         context: context,
         builder: (context) {
@@ -29,6 +30,7 @@ class _ButtonsState extends State<Buttons> {
             actions: [
               TextButton(
                 onPressed: () {
+                  function;
                   Navigator.pop(context);
                 },
                 child: const Text('OK'),
@@ -36,6 +38,12 @@ class _ButtonsState extends State<Buttons> {
             ],
           );
         });
+  }
+
+  @override
+  void initState() {
+    Functions().initital();
+    super.initState();
   }
 
   @override
@@ -51,7 +59,8 @@ class _ButtonsState extends State<Buttons> {
           GestureDetector(
             child: Button('Send'),
             onTap: () {
-              dialog('Enter the amount for send');
+              dialog('Enter the amount for send',
+                  Functions().sendWithdrawBalance(20, 'sendBalance'));
             },
           ),
           Button('Balance'),

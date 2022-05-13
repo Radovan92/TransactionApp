@@ -32,7 +32,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "getBlance",
+		"name": "getBalance",
 		"outputs": [
 			{
 				"internalType": "uint256",

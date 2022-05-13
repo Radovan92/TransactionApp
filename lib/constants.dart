@@ -7,6 +7,6 @@ const String rpcUrl =
     'https://speedy-nodes-nyc.moralis.io/cb0ba2ff086e2bec9a36df2c/eth/kovan';
 
 const String deployedContractAddress =
-    '0x9BFfbFE35387Bcab417E274128483d01ad6D72F3';
+    '0x0a34117643886A23ed87D0366A62bE393Fc711a7';
 
 dynamic data;
